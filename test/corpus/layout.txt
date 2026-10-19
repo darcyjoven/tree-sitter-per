@@ -62,7 +62,6 @@ END
             (grid
               (identifier)
               (area
-                (area_text)
                 (layout_tag)
                 (area_text)
                 (item_tag)
@@ -72,7 +71,6 @@ END
                 (item_tag)
                 (area_text)
                 (item_tag)
-                (area_text)
                 (layout_tag))))
           (page
             (identifier)

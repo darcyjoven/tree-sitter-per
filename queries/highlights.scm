@@ -80,8 +80,6 @@
 (layout_tag) @tag
 (area_text) @text
 (row_separator) @punctuation.delimiter
-(area_bracket) @punctuation.bracket
-(area_square) @punctuation.bracket
 
 ; ---------------------------------------------------------------------------
 ; 运算符与标点

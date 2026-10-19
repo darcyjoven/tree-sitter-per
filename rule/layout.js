@@ -62,7 +62,7 @@ export default {
       K.LAYOUT,
       optional($.attr_list_paren),
       repeat($._container),
-      optional(K.END),
+      K.END,
     ),
 
   // 旧式定长屏幕
@@ -123,27 +123,22 @@ export default {
           $.area_text,
           $.item_tag,
           $.layout_tag,
-          $.area_bracket,
-          $.area_square,
           $.row_separator,
         ),
       ),
       "}",
     ),
 
-  // 布局区中的普通文本(可含空格/中文), 到方括号/尖括号/花括号/竖线/换行为止
+  // 布局区中的普通文本(可含空格/中文), 到方括号/尖括号/花括号/竖线/换行为止；
+  // 允许 \< \> 转义与 -> / <- 箭头作为文本(真实语料常见)。
   area_text: (/** @type {any} */ $) =>
-    token(prec(1, /[^\[\]<>{}\n|]+/)),
+    token(prec(1, /(?:[^\[\]<>{}\n|]|\\[\[\]<>]|->|<-)+/)),
 
   // [f001   ] / [f1 - ] / ["Label": f2] 等 item tag / hbox tag
   item_tag: (/** @type {any} */ $) => token(prec(1, /\[[^\[\]\n]*\]/)),
 
   // <G group01   > / <   > 等 layout tag
   layout_tag: (/** @type {any} */ $) => token(prec(1, /<[^<>\n]*>/)),
-
-  // 容错: 未配对的尖括号/方括号
-  area_bracket: (/** @type {any} */ $) => choice("<", ">"),
-  area_square: (/** @type {any} */ $) => choice("[", "]"),
 
   // TABLE 列分隔符
   row_separator: (/** @type {any} */ $) => "|",

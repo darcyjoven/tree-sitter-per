@@ -49,14 +49,6 @@
       "required": false,
       "types": [
         {
-          "type": "area_bracket",
-          "named": true
-        },
-        {
-          "type": "area_square",
-          "named": true
-        },
-        {
           "type": "area_text",
           "named": true
         },
@@ -74,16 +66,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "area_bracket",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "area_square",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "attr_list",

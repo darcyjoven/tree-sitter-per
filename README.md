@@ -96,6 +96,11 @@ for sections, item types, attributes, layout areas and comments.
 
 - Block comments `{ ... }` are **not** supported: they collide with layout areas. Use `--`
   or `#`.
+- `LAYOUT` and `INSTRUCTIONS` sections require a closing `END` in this grammar (the manual
+  allows omitting them). This keeps "missing container END" detectable; all 7070 real `.per`
+  files in the validation corpus already write them.
+- Inside layout areas, literal angle brackets must be escaped (`\>`, `\<`); arrows `->` / `<-`
+  are allowed as text. Unclosed `[` / `<` tags are reported as `ERROR`.
 - The grammar is intentionally tolerant about section ordering and optional `END`s; use
   `fglform` for authoritative validation.
 - Trailing garbage after the last section is reported as `ERROR` (as in normal tree-sitter

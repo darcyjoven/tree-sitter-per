@@ -20,6 +20,7 @@ END
 END
 END
 END
+END
 
 ATTRIBUTES
 Phantom formonly.pid type CHAR;

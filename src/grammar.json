@@ -3823,28 +3823,20 @@
           }
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "ALIAS",
+          "type": "ALIAS",
+          "content": {
+            "type": "TOKEN",
+            "content": {
+              "type": "PREC",
+              "value": 10,
               "content": {
-                "type": "TOKEN",
-                "content": {
-                  "type": "PREC",
-                  "value": 10,
-                  "content": {
-                    "type": "PATTERN",
-                    "value": "[eE][nN][dD]"
-                  }
-                }
-              },
-              "named": false,
-              "value": "END"
-            },
-            {
-              "type": "BLANK"
+                "type": "PATTERN",
+                "value": "[eE][nN][dD]"
+              }
             }
-          ]
+          },
+          "named": false,
+          "value": "END"
         }
       ]
     },
@@ -10550,14 +10542,6 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "area_bracket"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "area_square"
-              },
-              {
-                "type": "SYMBOL",
                 "name": "row_separator"
               }
             ]
@@ -10576,7 +10560,7 @@
         "value": 1,
         "content": {
           "type": "PATTERN",
-          "value": "[^\\[\\]<>{}\\n|]+"
+          "value": "(?:[^\\[\\]<>{}\\n|]|\\\\[\\[\\]<>]|->|<-)+"
         }
       }
     },
@@ -10601,32 +10585,6 @@
           "value": "<[^<>\\n]*>"
         }
       }
-    },
-    "area_bracket": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "<"
-        },
-        {
-          "type": "STRING",
-          "value": ">"
-        }
-      ]
-    },
-    "area_square": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "["
-        },
-        {
-          "type": "STRING",
-          "value": "]"
-        }
-      ]
     },
     "row_separator": {
       "type": "STRING",
