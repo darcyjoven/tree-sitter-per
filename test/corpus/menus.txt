@@ -1,0 +1,136 @@
+==================
+action defaults topmenu toolbar
+==================
+
+ACTION DEFAULTS
+  ACTION accept ( COMMENT="Commit", CONTEXTMENU=NO )
+  ACTION cancel ( TEXT="Stop", ACCELERATOR=SHIFT-F2, VALIDATE=NO )
+END
+
+TOPMENU TopMenu1 ( STYLE="mystyle" )
+  GROUP form(TEXT="Form")
+    COMMAND help(TEXT="Help", IMAGE="quest")
+    SEPARATOR
+    COMMAND quit(TEXT="Quit")
+  END
+END
+
+TOOLBAR tb ( STYLE="mystyle" )
+  ITEM accept ( TEXT="Ok", IMAGE="ok" )
+  SEPARATOR ( TAG="lastSeparator" )
+END
+
+---
+
+(source_file
+  (action_defaults
+    (action_default_entry
+      (name
+        (identifier))
+      (attr_list
+        (attribute
+          (name
+            (identifier))
+          (value
+            (string)))
+        (attribute
+          (name
+            (identifier))
+          (value
+            (name
+              (identifier))))))
+    (action_default_entry
+      (name
+        (identifier))
+      (attr_list
+        (attribute
+          (name
+            (identifier))
+          (value
+            (string)))
+        (attribute
+          (name
+            (identifier))
+          (value
+            (key_value
+              (name
+                (identifier))
+              (name
+                (identifier)))))
+        (attribute
+          (name
+            (identifier))
+          (value
+            (name
+              (identifier)))))))
+  (topmenu
+    (identifier)
+    (attr_list_paren
+      (attr_list
+        (attribute
+          (name
+            (identifier))
+          (value
+            (string)))))
+    (menu_group
+      (identifier)
+      (attr_list_paren
+        (attr_list
+          (attribute
+            (name
+              (identifier))
+            (value
+              (string)))))
+      (menu_item
+        (identifier)
+        (attr_list_paren
+          (attr_list
+            (attribute
+              (name
+                (identifier))
+              (value
+                (string)))
+            (attribute
+              (name)
+              (value
+                (string))))))
+      (menu_item)
+      (menu_item
+        (identifier)
+        (attr_list_paren
+          (attr_list
+            (attribute
+              (name
+                (identifier))
+              (value
+                (string))))))))
+  (toolbar
+    (identifier)
+    (attr_list_paren
+      (attr_list
+        (attribute
+          (name
+            (identifier))
+          (value
+            (string)))))
+    (toolbar_item
+      (identifier)
+      (attr_list_paren
+        (attr_list
+          (attribute
+            (name
+              (identifier))
+            (value
+              (string)))
+          (attribute
+            (name)
+            (value
+              (string))))))
+    (toolbar_item
+      (attr_list_paren
+        (attr_list
+          (attribute
+            (name
+              (identifier))
+            (value
+              (string))))))))

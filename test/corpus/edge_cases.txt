@@ -1,0 +1,180 @@
+==================
+keyword names phantom type color and properties
+==================
+
+SCHEMA formonly
+LAYOUT (text=%"edge")
+VBox VBox1
+Grid grid
+{
+ Name: [name      ]
+}
+END
+Folder folder
+Page Page(text="Main")
+Grid gr2
+{
+ [name      ]
+}
+END
+END
+END
+END
+
+ATTRIBUTES
+Phantom formonly.pid type CHAR;
+Edit name=formonly.name, color = black reverse, title=%"Name";
+Edit price=formonly.price, color = red reverse, include=(1 TO 10);
+WebComponent wc1=formonly.cal, componentType="Calendar", properties=(data = %"", charttype = %"", action = %"" );
+Edit legacy1 = formonly.legacy, NOENTRY;
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr(formonly.name, formonly.price)
+END
+
+---
+
+(source_file
+  (schema)
+  (layout
+    (layout_section
+      (attr_list_paren
+        (attr_list
+          (attribute
+            (name
+              (identifier))
+            (value
+              (string)))))
+      (vbox
+        (identifier)
+        (grid
+          (name_keyword)
+          (area
+            (area_text)
+            (item_tag)))
+        (folder
+          (name)
+          (page
+            (name)
+            (attr_list_paren
+              (attr_list
+                (attribute
+                  (name
+                    (identifier))
+                  (value
+                    (string)))))
+            (grid
+              (identifier)
+              (area
+                (area_text)
+                (item_tag))))))))
+  (attributes
+    (phantom_item
+      (field_ref
+        (name)
+        (name
+          (identifier)))
+      (type_clause
+        (datatype
+          (name
+            (identifier)))))
+    (attribute_item
+      (item_type)
+      (name
+        (identifier))
+      (field_ref
+        (name)
+        (name
+          (identifier)))
+      (attr_list
+        (attribute
+          (name
+            (identifier))
+          (value
+            (multiword_value
+              (identifier)
+              (identifier))))
+        (attribute
+          (name)
+          (value
+            (string)))))
+    (attribute_item
+      (item_type)
+      (name
+        (identifier))
+      (field_ref
+        (name)
+        (name
+          (identifier)))
+      (attr_list
+        (attribute
+          (name
+            (identifier))
+          (value
+            (multiword_value
+              (identifier)
+              (identifier))))
+        (attribute
+          (name
+            (identifier))
+          (value
+            (value_list
+              (literal
+                (number))
+              (literal
+                (number)))))))
+    (attribute_item
+      (item_type)
+      (name
+        (identifier))
+      (field_ref
+        (name)
+        (name
+          (identifier)))
+      (attr_list
+        (attribute
+          (name
+            (identifier))
+          (value
+            (string)))
+        (attribute
+          (name
+            (identifier))
+          (value
+            (value_list
+              (name
+                (identifier))
+              (value
+                (string))
+              (name
+                (identifier))
+              (value
+                (string))
+              (name)
+              (value
+                (string)))))))
+    (attribute_item
+      (item_type)
+      (name
+        (identifier))
+      (field_ref
+        (name)
+        (name
+          (identifier)))
+      (attr_list
+        (attribute
+          (name
+            (identifier))))))
+  (instructions
+    (screen_record_entry
+      (name
+        (identifier))
+      (field_ref
+        (name)
+        (name
+          (identifier)))
+      (field_ref
+        (name)
+        (name
+          (identifier))))))

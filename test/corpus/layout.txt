@@ -1,0 +1,94 @@
+==================
+modern layout containers
+==================
+
+LAYOUT (spacing=normal, text=%"amms100")
+VBox VBox1
+Folder pc697
+Page page01(text="Main")
+Grid gr3782
+{
+ <G group01                     >
+ [mmd01              ] W/O Type [mmd011    ]
+ [mmd02              ] Reason   [mmd021    ]
+ <                              >
+}
+END
+END
+Page info(text="Info")
+Grid gr3783
+{
+ ["Label:":           ]
+ [f001     :f002      ]
+ [       :f003        ]
+}
+END
+END
+END
+END
+END
+
+---
+
+(source_file
+  (layout
+    (layout_section
+      (attr_list_paren
+        (attr_list
+          (attribute
+            (name
+              (identifier))
+            (value
+              (name
+                (identifier))))
+          (attribute
+            (name
+              (identifier))
+            (value
+              (string)))))
+      (vbox
+        (identifier)
+        (folder
+          (identifier)
+          (page
+            (identifier)
+            (attr_list_paren
+              (attr_list
+                (attribute
+                  (name
+                    (identifier))
+                  (value
+                    (string)))))
+            (grid
+              (identifier)
+              (area
+                (area_text)
+                (layout_tag)
+                (area_text)
+                (item_tag)
+                (area_text)
+                (item_tag)
+                (area_text)
+                (item_tag)
+                (area_text)
+                (item_tag)
+                (area_text)
+                (layout_tag))))
+          (page
+            (identifier)
+            (attr_list_paren
+              (attr_list
+                (attribute
+                  (name
+                    (identifier))
+                  (value
+                    (string)))))
+            (grid
+              (identifier)
+              (area
+                (area_text)
+                (item_tag)
+                (area_text)
+                (item_tag)
+                (area_text)
+                (item_tag)))))))))

@@ -1,0 +1,4170 @@
+[
+  {
+    "type": "action_default_entry",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "attr_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "action_defaults",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "action_default_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "area",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "area_bracket",
+          "named": true
+        },
+        {
+          "type": "area_square",
+          "named": true
+        },
+        {
+          "type": "area_text",
+          "named": true
+        },
+        {
+          "type": "item_tag",
+          "named": true
+        },
+        {
+          "type": "layout_tag",
+          "named": true
+        },
+        {
+          "type": "row_separator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "area_bracket",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "area_square",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "attr_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attr_list_paren",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "attr_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "value",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "boolexpr",
+          "named": true
+        },
+        {
+          "type": "field_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute_item",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "field_ref",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "tag": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attr_list",
+          "named": true
+        },
+        {
+          "type": "item_type",
+          "named": true
+        },
+        {
+          "type": "type_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attributes",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attribute_item",
+          "named": true
+        },
+        {
+          "type": "phantom_item",
+          "named": true
+        },
+        {
+          "type": "untyped_attribute_item",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bool_op",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "bool_primary",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bool_op",
+          "named": true
+        },
+        {
+          "type": "field_ref",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "boolexpr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bool_primary",
+          "named": true
+        },
+        {
+          "type": "boolexpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "datatype",
+    "named": true,
+    "fields": {
+      "from": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "datetime_qualifier",
+            "named": true
+          }
+        ]
+      },
+      "to": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "datetime_qualifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "datetime_qualifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "default_sample_entry",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "delimiters_entry",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "field_ref",
+    "named": true,
+    "fields": {
+      "column": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "folder",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ACTION",
+            "named": false
+          },
+          {
+            "type": "AGGREGATE",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "ATTRIBUTES",
+            "named": false
+          },
+          {
+            "type": "BUTTON",
+            "named": false
+          },
+          {
+            "type": "BUTTONEDIT",
+            "named": false
+          },
+          {
+            "type": "BY",
+            "named": false
+          },
+          {
+            "type": "CANVAS",
+            "named": false
+          },
+          {
+            "type": "CHARACTERS",
+            "named": false
+          },
+          {
+            "type": "CHECKBOX",
+            "named": false
+          },
+          {
+            "type": "COLUMNS",
+            "named": false
+          },
+          {
+            "type": "COMBOBOX",
+            "named": false
+          },
+          {
+            "type": "COMMAND",
+            "named": false
+          },
+          {
+            "type": "DATABASE",
+            "named": false
+          },
+          {
+            "type": "DATEEDIT",
+            "named": false
+          },
+          {
+            "type": "DAY",
+            "named": false
+          },
+          {
+            "type": "DEFAULT",
+            "named": false
+          },
+          {
+            "type": "DEFAULTS",
+            "named": false
+          },
+          {
+            "type": "DELIMITERS",
+            "named": false
+          },
+          {
+            "type": "EDIT",
+            "named": false
+          },
+          {
+            "type": "FALSE",
+            "named": false
+          },
+          {
+            "type": "FIELD",
+            "named": false
+          },
+          {
+            "type": "FORMONLY",
+            "named": false
+          },
+          {
+            "type": "FRACTION",
+            "named": false
+          },
+          {
+            "type": "HOUR",
+            "named": false
+          },
+          {
+            "type": "IMAGE",
+            "named": false
+          },
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "INSTRUCTIONS",
+            "named": false
+          },
+          {
+            "type": "ITEM",
+            "named": false
+          },
+          {
+            "type": "KEYS",
+            "named": false
+          },
+          {
+            "type": "LABEL",
+            "named": false
+          },
+          {
+            "type": "LAYOUT",
+            "named": false
+          },
+          {
+            "type": "LIKE",
+            "named": false
+          },
+          {
+            "type": "LINES",
+            "named": false
+          },
+          {
+            "type": "MINUTE",
+            "named": false
+          },
+          {
+            "type": "MONTH",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "NULL",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "PHANTOM",
+            "named": false
+          },
+          {
+            "type": "PIXELS",
+            "named": false
+          },
+          {
+            "type": "POINTS",
+            "named": false
+          },
+          {
+            "type": "PROGRESSBAR",
+            "named": false
+          },
+          {
+            "type": "RADIOGROUP",
+            "named": false
+          },
+          {
+            "type": "RECORD",
+            "named": false
+          },
+          {
+            "type": "SAMPLE",
+            "named": false
+          },
+          {
+            "type": "SCHEMA",
+            "named": false
+          },
+          {
+            "type": "SCREEN",
+            "named": false
+          },
+          {
+            "type": "SECOND",
+            "named": false
+          },
+          {
+            "type": "SEPARATOR",
+            "named": false
+          },
+          {
+            "type": "SIZE",
+            "named": false
+          },
+          {
+            "type": "SLIDER",
+            "named": false
+          },
+          {
+            "type": "SPINEDIT",
+            "named": false
+          },
+          {
+            "type": "TABLES",
+            "named": false
+          },
+          {
+            "type": "TEXTEDIT",
+            "named": false
+          },
+          {
+            "type": "TIMEEDIT",
+            "named": false
+          },
+          {
+            "type": "TITLE",
+            "named": false
+          },
+          {
+            "type": "TO",
+            "named": false
+          },
+          {
+            "type": "TOOLBAR",
+            "named": false
+          },
+          {
+            "type": "TOPMENU",
+            "named": false
+          },
+          {
+            "type": "TRUE",
+            "named": false
+          },
+          {
+            "type": "TYPE",
+            "named": false
+          },
+          {
+            "type": "WEBCOMPONENT",
+            "named": false
+          },
+          {
+            "type": "WHERE",
+            "named": false
+          },
+          {
+            "type": "WITHOUT",
+            "named": false
+          },
+          {
+            "type": "YEAR",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "page",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "grid",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name_keyword",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "area",
+          "named": true
+        },
+        {
+          "type": "attr_list_paren",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_container",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ACTION",
+            "named": false
+          },
+          {
+            "type": "AGGREGATE",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "ATTRIBUTES",
+            "named": false
+          },
+          {
+            "type": "BUTTON",
+            "named": false
+          },
+          {
+            "type": "BUTTONEDIT",
+            "named": false
+          },
+          {
+            "type": "BY",
+            "named": false
+          },
+          {
+            "type": "CANVAS",
+            "named": false
+          },
+          {
+            "type": "CHARACTERS",
+            "named": false
+          },
+          {
+            "type": "CHECKBOX",
+            "named": false
+          },
+          {
+            "type": "COLUMNS",
+            "named": false
+          },
+          {
+            "type": "COMBOBOX",
+            "named": false
+          },
+          {
+            "type": "COMMAND",
+            "named": false
+          },
+          {
+            "type": "DATABASE",
+            "named": false
+          },
+          {
+            "type": "DATEEDIT",
+            "named": false
+          },
+          {
+            "type": "DAY",
+            "named": false
+          },
+          {
+            "type": "DEFAULT",
+            "named": false
+          },
+          {
+            "type": "DEFAULTS",
+            "named": false
+          },
+          {
+            "type": "DELIMITERS",
+            "named": false
+          },
+          {
+            "type": "EDIT",
+            "named": false
+          },
+          {
+            "type": "FALSE",
+            "named": false
+          },
+          {
+            "type": "FIELD",
+            "named": false
+          },
+          {
+            "type": "FORMONLY",
+            "named": false
+          },
+          {
+            "type": "FRACTION",
+            "named": false
+          },
+          {
+            "type": "HOUR",
+            "named": false
+          },
+          {
+            "type": "IMAGE",
+            "named": false
+          },
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "INSTRUCTIONS",
+            "named": false
+          },
+          {
+            "type": "ITEM",
+            "named": false
+          },
+          {
+            "type": "KEYS",
+            "named": false
+          },
+          {
+            "type": "LABEL",
+            "named": false
+          },
+          {
+            "type": "LAYOUT",
+            "named": false
+          },
+          {
+            "type": "LIKE",
+            "named": false
+          },
+          {
+            "type": "LINES",
+            "named": false
+          },
+          {
+            "type": "MINUTE",
+            "named": false
+          },
+          {
+            "type": "MONTH",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "NULL",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "PHANTOM",
+            "named": false
+          },
+          {
+            "type": "PIXELS",
+            "named": false
+          },
+          {
+            "type": "POINTS",
+            "named": false
+          },
+          {
+            "type": "PROGRESSBAR",
+            "named": false
+          },
+          {
+            "type": "RADIOGROUP",
+            "named": false
+          },
+          {
+            "type": "RECORD",
+            "named": false
+          },
+          {
+            "type": "SAMPLE",
+            "named": false
+          },
+          {
+            "type": "SCHEMA",
+            "named": false
+          },
+          {
+            "type": "SCREEN",
+            "named": false
+          },
+          {
+            "type": "SECOND",
+            "named": false
+          },
+          {
+            "type": "SEPARATOR",
+            "named": false
+          },
+          {
+            "type": "SIZE",
+            "named": false
+          },
+          {
+            "type": "SLIDER",
+            "named": false
+          },
+          {
+            "type": "SPINEDIT",
+            "named": false
+          },
+          {
+            "type": "TABLES",
+            "named": false
+          },
+          {
+            "type": "TEXTEDIT",
+            "named": false
+          },
+          {
+            "type": "TIMEEDIT",
+            "named": false
+          },
+          {
+            "type": "TITLE",
+            "named": false
+          },
+          {
+            "type": "TO",
+            "named": false
+          },
+          {
+            "type": "TOOLBAR",
+            "named": false
+          },
+          {
+            "type": "TOPMENU",
+            "named": false
+          },
+          {
+            "type": "TRUE",
+            "named": false
+          },
+          {
+            "type": "TYPE",
+            "named": false
+          },
+          {
+            "type": "WEBCOMPONENT",
+            "named": false
+          },
+          {
+            "type": "WHERE",
+            "named": false
+          },
+          {
+            "type": "WITHOUT",
+            "named": false
+          },
+          {
+            "type": "YEAR",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "folder",
+          "named": true
+        },
+        {
+          "type": "grid",
+          "named": true
+        },
+        {
+          "type": "group_container",
+          "named": true
+        },
+        {
+          "type": "hbox",
+          "named": true
+        },
+        {
+          "type": "page",
+          "named": true
+        },
+        {
+          "type": "scrollgrid",
+          "named": true
+        },
+        {
+          "type": "table_container",
+          "named": true
+        },
+        {
+          "type": "tree_container",
+          "named": true
+        },
+        {
+          "type": "vbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hbox",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ACTION",
+            "named": false
+          },
+          {
+            "type": "AGGREGATE",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "ATTRIBUTES",
+            "named": false
+          },
+          {
+            "type": "BUTTON",
+            "named": false
+          },
+          {
+            "type": "BUTTONEDIT",
+            "named": false
+          },
+          {
+            "type": "BY",
+            "named": false
+          },
+          {
+            "type": "CANVAS",
+            "named": false
+          },
+          {
+            "type": "CHARACTERS",
+            "named": false
+          },
+          {
+            "type": "CHECKBOX",
+            "named": false
+          },
+          {
+            "type": "COLUMNS",
+            "named": false
+          },
+          {
+            "type": "COMBOBOX",
+            "named": false
+          },
+          {
+            "type": "COMMAND",
+            "named": false
+          },
+          {
+            "type": "DATABASE",
+            "named": false
+          },
+          {
+            "type": "DATEEDIT",
+            "named": false
+          },
+          {
+            "type": "DAY",
+            "named": false
+          },
+          {
+            "type": "DEFAULT",
+            "named": false
+          },
+          {
+            "type": "DEFAULTS",
+            "named": false
+          },
+          {
+            "type": "DELIMITERS",
+            "named": false
+          },
+          {
+            "type": "EDIT",
+            "named": false
+          },
+          {
+            "type": "FALSE",
+            "named": false
+          },
+          {
+            "type": "FIELD",
+            "named": false
+          },
+          {
+            "type": "FORMONLY",
+            "named": false
+          },
+          {
+            "type": "FRACTION",
+            "named": false
+          },
+          {
+            "type": "HOUR",
+            "named": false
+          },
+          {
+            "type": "IMAGE",
+            "named": false
+          },
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "INSTRUCTIONS",
+            "named": false
+          },
+          {
+            "type": "ITEM",
+            "named": false
+          },
+          {
+            "type": "KEYS",
+            "named": false
+          },
+          {
+            "type": "LABEL",
+            "named": false
+          },
+          {
+            "type": "LAYOUT",
+            "named": false
+          },
+          {
+            "type": "LIKE",
+            "named": false
+          },
+          {
+            "type": "LINES",
+            "named": false
+          },
+          {
+            "type": "MINUTE",
+            "named": false
+          },
+          {
+            "type": "MONTH",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "NULL",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "PHANTOM",
+            "named": false
+          },
+          {
+            "type": "PIXELS",
+            "named": false
+          },
+          {
+            "type": "POINTS",
+            "named": false
+          },
+          {
+            "type": "PROGRESSBAR",
+            "named": false
+          },
+          {
+            "type": "RADIOGROUP",
+            "named": false
+          },
+          {
+            "type": "RECORD",
+            "named": false
+          },
+          {
+            "type": "SAMPLE",
+            "named": false
+          },
+          {
+            "type": "SCHEMA",
+            "named": false
+          },
+          {
+            "type": "SCREEN",
+            "named": false
+          },
+          {
+            "type": "SECOND",
+            "named": false
+          },
+          {
+            "type": "SEPARATOR",
+            "named": false
+          },
+          {
+            "type": "SIZE",
+            "named": false
+          },
+          {
+            "type": "SLIDER",
+            "named": false
+          },
+          {
+            "type": "SPINEDIT",
+            "named": false
+          },
+          {
+            "type": "TABLES",
+            "named": false
+          },
+          {
+            "type": "TEXTEDIT",
+            "named": false
+          },
+          {
+            "type": "TIMEEDIT",
+            "named": false
+          },
+          {
+            "type": "TITLE",
+            "named": false
+          },
+          {
+            "type": "TO",
+            "named": false
+          },
+          {
+            "type": "TOOLBAR",
+            "named": false
+          },
+          {
+            "type": "TOPMENU",
+            "named": false
+          },
+          {
+            "type": "TRUE",
+            "named": false
+          },
+          {
+            "type": "TYPE",
+            "named": false
+          },
+          {
+            "type": "WEBCOMPONENT",
+            "named": false
+          },
+          {
+            "type": "WHERE",
+            "named": false
+          },
+          {
+            "type": "WITHOUT",
+            "named": false
+          },
+          {
+            "type": "YEAR",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "folder",
+          "named": true
+        },
+        {
+          "type": "grid",
+          "named": true
+        },
+        {
+          "type": "group_container",
+          "named": true
+        },
+        {
+          "type": "hbox",
+          "named": true
+        },
+        {
+          "type": "page",
+          "named": true
+        },
+        {
+          "type": "scrollgrid",
+          "named": true
+        },
+        {
+          "type": "table_container",
+          "named": true
+        },
+        {
+          "type": "tree_container",
+          "named": true
+        },
+        {
+          "type": "vbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "instructions",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "default_sample_entry",
+          "named": true
+        },
+        {
+          "type": "delimiters_entry",
+          "named": true
+        },
+        {
+          "type": "screen_record_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "key_entry",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "key_name",
+            "named": true
+          }
+        ]
+      },
+      "label": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "key_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "key_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "keys",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "key_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "layout",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "layout_section",
+          "named": true
+        },
+        {
+          "type": "screen_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "layout_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "folder",
+          "named": true
+        },
+        {
+          "type": "grid",
+          "named": true
+        },
+        {
+          "type": "group_container",
+          "named": true
+        },
+        {
+          "type": "hbox",
+          "named": true
+        },
+        {
+          "type": "page",
+          "named": true
+        },
+        {
+          "type": "scrollgrid",
+          "named": true
+        },
+        {
+          "type": "table_container",
+          "named": true
+        },
+        {
+          "type": "tree_container",
+          "named": true
+        },
+        {
+          "type": "vbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "menu_group",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ACTION",
+            "named": false
+          },
+          {
+            "type": "AGGREGATE",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "ATTRIBUTES",
+            "named": false
+          },
+          {
+            "type": "BUTTON",
+            "named": false
+          },
+          {
+            "type": "BUTTONEDIT",
+            "named": false
+          },
+          {
+            "type": "BY",
+            "named": false
+          },
+          {
+            "type": "CANVAS",
+            "named": false
+          },
+          {
+            "type": "CHARACTERS",
+            "named": false
+          },
+          {
+            "type": "CHECKBOX",
+            "named": false
+          },
+          {
+            "type": "COLUMNS",
+            "named": false
+          },
+          {
+            "type": "COMBOBOX",
+            "named": false
+          },
+          {
+            "type": "DATABASE",
+            "named": false
+          },
+          {
+            "type": "DATEEDIT",
+            "named": false
+          },
+          {
+            "type": "DAY",
+            "named": false
+          },
+          {
+            "type": "DEFAULT",
+            "named": false
+          },
+          {
+            "type": "DEFAULTS",
+            "named": false
+          },
+          {
+            "type": "DELIMITERS",
+            "named": false
+          },
+          {
+            "type": "EDIT",
+            "named": false
+          },
+          {
+            "type": "FALSE",
+            "named": false
+          },
+          {
+            "type": "FIELD",
+            "named": false
+          },
+          {
+            "type": "FOLDER",
+            "named": false
+          },
+          {
+            "type": "FORMONLY",
+            "named": false
+          },
+          {
+            "type": "FRACTION",
+            "named": false
+          },
+          {
+            "type": "GRID",
+            "named": false
+          },
+          {
+            "type": "HBOX",
+            "named": false
+          },
+          {
+            "type": "HOUR",
+            "named": false
+          },
+          {
+            "type": "IMAGE",
+            "named": false
+          },
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "INSTRUCTIONS",
+            "named": false
+          },
+          {
+            "type": "ITEM",
+            "named": false
+          },
+          {
+            "type": "KEYS",
+            "named": false
+          },
+          {
+            "type": "LABEL",
+            "named": false
+          },
+          {
+            "type": "LAYOUT",
+            "named": false
+          },
+          {
+            "type": "LIKE",
+            "named": false
+          },
+          {
+            "type": "LINES",
+            "named": false
+          },
+          {
+            "type": "MINUTE",
+            "named": false
+          },
+          {
+            "type": "MONTH",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "NULL",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "PAGE",
+            "named": false
+          },
+          {
+            "type": "PHANTOM",
+            "named": false
+          },
+          {
+            "type": "PIXELS",
+            "named": false
+          },
+          {
+            "type": "POINTS",
+            "named": false
+          },
+          {
+            "type": "PROGRESSBAR",
+            "named": false
+          },
+          {
+            "type": "RADIOGROUP",
+            "named": false
+          },
+          {
+            "type": "RECORD",
+            "named": false
+          },
+          {
+            "type": "SAMPLE",
+            "named": false
+          },
+          {
+            "type": "SCHEMA",
+            "named": false
+          },
+          {
+            "type": "SCREEN",
+            "named": false
+          },
+          {
+            "type": "SCROLLGRID",
+            "named": false
+          },
+          {
+            "type": "SECOND",
+            "named": false
+          },
+          {
+            "type": "SIZE",
+            "named": false
+          },
+          {
+            "type": "SLIDER",
+            "named": false
+          },
+          {
+            "type": "SPINEDIT",
+            "named": false
+          },
+          {
+            "type": "TABLE",
+            "named": false
+          },
+          {
+            "type": "TABLES",
+            "named": false
+          },
+          {
+            "type": "TEXTEDIT",
+            "named": false
+          },
+          {
+            "type": "TIMEEDIT",
+            "named": false
+          },
+          {
+            "type": "TITLE",
+            "named": false
+          },
+          {
+            "type": "TO",
+            "named": false
+          },
+          {
+            "type": "TOOLBAR",
+            "named": false
+          },
+          {
+            "type": "TOPMENU",
+            "named": false
+          },
+          {
+            "type": "TREE",
+            "named": false
+          },
+          {
+            "type": "TRUE",
+            "named": false
+          },
+          {
+            "type": "TYPE",
+            "named": false
+          },
+          {
+            "type": "VBOX",
+            "named": false
+          },
+          {
+            "type": "WEBCOMPONENT",
+            "named": false
+          },
+          {
+            "type": "WHERE",
+            "named": false
+          },
+          {
+            "type": "WITHOUT",
+            "named": false
+          },
+          {
+            "type": "YEAR",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "menu_item",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "menu_item",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ACTION",
+            "named": false
+          },
+          {
+            "type": "AGGREGATE",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "ATTRIBUTES",
+            "named": false
+          },
+          {
+            "type": "BUTTON",
+            "named": false
+          },
+          {
+            "type": "BUTTONEDIT",
+            "named": false
+          },
+          {
+            "type": "BY",
+            "named": false
+          },
+          {
+            "type": "CANVAS",
+            "named": false
+          },
+          {
+            "type": "CHARACTERS",
+            "named": false
+          },
+          {
+            "type": "CHECKBOX",
+            "named": false
+          },
+          {
+            "type": "COLUMNS",
+            "named": false
+          },
+          {
+            "type": "COMBOBOX",
+            "named": false
+          },
+          {
+            "type": "DATABASE",
+            "named": false
+          },
+          {
+            "type": "DATEEDIT",
+            "named": false
+          },
+          {
+            "type": "DAY",
+            "named": false
+          },
+          {
+            "type": "DEFAULT",
+            "named": false
+          },
+          {
+            "type": "DEFAULTS",
+            "named": false
+          },
+          {
+            "type": "DELIMITERS",
+            "named": false
+          },
+          {
+            "type": "EDIT",
+            "named": false
+          },
+          {
+            "type": "FALSE",
+            "named": false
+          },
+          {
+            "type": "FIELD",
+            "named": false
+          },
+          {
+            "type": "FOLDER",
+            "named": false
+          },
+          {
+            "type": "FORMONLY",
+            "named": false
+          },
+          {
+            "type": "FRACTION",
+            "named": false
+          },
+          {
+            "type": "GRID",
+            "named": false
+          },
+          {
+            "type": "GROUP",
+            "named": false
+          },
+          {
+            "type": "HBOX",
+            "named": false
+          },
+          {
+            "type": "HOUR",
+            "named": false
+          },
+          {
+            "type": "IMAGE",
+            "named": false
+          },
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "INSTRUCTIONS",
+            "named": false
+          },
+          {
+            "type": "ITEM",
+            "named": false
+          },
+          {
+            "type": "KEYS",
+            "named": false
+          },
+          {
+            "type": "LABEL",
+            "named": false
+          },
+          {
+            "type": "LAYOUT",
+            "named": false
+          },
+          {
+            "type": "LIKE",
+            "named": false
+          },
+          {
+            "type": "LINES",
+            "named": false
+          },
+          {
+            "type": "MINUTE",
+            "named": false
+          },
+          {
+            "type": "MONTH",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "NULL",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "PAGE",
+            "named": false
+          },
+          {
+            "type": "PHANTOM",
+            "named": false
+          },
+          {
+            "type": "PIXELS",
+            "named": false
+          },
+          {
+            "type": "POINTS",
+            "named": false
+          },
+          {
+            "type": "PROGRESSBAR",
+            "named": false
+          },
+          {
+            "type": "RADIOGROUP",
+            "named": false
+          },
+          {
+            "type": "RECORD",
+            "named": false
+          },
+          {
+            "type": "SAMPLE",
+            "named": false
+          },
+          {
+            "type": "SCHEMA",
+            "named": false
+          },
+          {
+            "type": "SCREEN",
+            "named": false
+          },
+          {
+            "type": "SCROLLGRID",
+            "named": false
+          },
+          {
+            "type": "SECOND",
+            "named": false
+          },
+          {
+            "type": "SIZE",
+            "named": false
+          },
+          {
+            "type": "SLIDER",
+            "named": false
+          },
+          {
+            "type": "SPINEDIT",
+            "named": false
+          },
+          {
+            "type": "TABLE",
+            "named": false
+          },
+          {
+            "type": "TABLES",
+            "named": false
+          },
+          {
+            "type": "TEXTEDIT",
+            "named": false
+          },
+          {
+            "type": "TIMEEDIT",
+            "named": false
+          },
+          {
+            "type": "TITLE",
+            "named": false
+          },
+          {
+            "type": "TO",
+            "named": false
+          },
+          {
+            "type": "TOOLBAR",
+            "named": false
+          },
+          {
+            "type": "TOPMENU",
+            "named": false
+          },
+          {
+            "type": "TREE",
+            "named": false
+          },
+          {
+            "type": "TRUE",
+            "named": false
+          },
+          {
+            "type": "TYPE",
+            "named": false
+          },
+          {
+            "type": "VBOX",
+            "named": false
+          },
+          {
+            "type": "WEBCOMPONENT",
+            "named": false
+          },
+          {
+            "type": "WHERE",
+            "named": false
+          },
+          {
+            "type": "WITHOUT",
+            "named": false
+          },
+          {
+            "type": "YEAR",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multiword_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name_keyword",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "number_with_unit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "page",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ACTION",
+            "named": false
+          },
+          {
+            "type": "AGGREGATE",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "ATTRIBUTES",
+            "named": false
+          },
+          {
+            "type": "BUTTON",
+            "named": false
+          },
+          {
+            "type": "BUTTONEDIT",
+            "named": false
+          },
+          {
+            "type": "BY",
+            "named": false
+          },
+          {
+            "type": "CANVAS",
+            "named": false
+          },
+          {
+            "type": "CHARACTERS",
+            "named": false
+          },
+          {
+            "type": "CHECKBOX",
+            "named": false
+          },
+          {
+            "type": "COLUMNS",
+            "named": false
+          },
+          {
+            "type": "COMBOBOX",
+            "named": false
+          },
+          {
+            "type": "COMMAND",
+            "named": false
+          },
+          {
+            "type": "DATABASE",
+            "named": false
+          },
+          {
+            "type": "DATEEDIT",
+            "named": false
+          },
+          {
+            "type": "DAY",
+            "named": false
+          },
+          {
+            "type": "DEFAULT",
+            "named": false
+          },
+          {
+            "type": "DEFAULTS",
+            "named": false
+          },
+          {
+            "type": "DELIMITERS",
+            "named": false
+          },
+          {
+            "type": "EDIT",
+            "named": false
+          },
+          {
+            "type": "FALSE",
+            "named": false
+          },
+          {
+            "type": "FIELD",
+            "named": false
+          },
+          {
+            "type": "FORMONLY",
+            "named": false
+          },
+          {
+            "type": "FRACTION",
+            "named": false
+          },
+          {
+            "type": "HOUR",
+            "named": false
+          },
+          {
+            "type": "IMAGE",
+            "named": false
+          },
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "INSTRUCTIONS",
+            "named": false
+          },
+          {
+            "type": "ITEM",
+            "named": false
+          },
+          {
+            "type": "KEYS",
+            "named": false
+          },
+          {
+            "type": "LABEL",
+            "named": false
+          },
+          {
+            "type": "LAYOUT",
+            "named": false
+          },
+          {
+            "type": "LIKE",
+            "named": false
+          },
+          {
+            "type": "LINES",
+            "named": false
+          },
+          {
+            "type": "MINUTE",
+            "named": false
+          },
+          {
+            "type": "MONTH",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "NULL",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "PHANTOM",
+            "named": false
+          },
+          {
+            "type": "PIXELS",
+            "named": false
+          },
+          {
+            "type": "POINTS",
+            "named": false
+          },
+          {
+            "type": "PROGRESSBAR",
+            "named": false
+          },
+          {
+            "type": "RADIOGROUP",
+            "named": false
+          },
+          {
+            "type": "RECORD",
+            "named": false
+          },
+          {
+            "type": "SAMPLE",
+            "named": false
+          },
+          {
+            "type": "SCHEMA",
+            "named": false
+          },
+          {
+            "type": "SCREEN",
+            "named": false
+          },
+          {
+            "type": "SECOND",
+            "named": false
+          },
+          {
+            "type": "SEPARATOR",
+            "named": false
+          },
+          {
+            "type": "SIZE",
+            "named": false
+          },
+          {
+            "type": "SLIDER",
+            "named": false
+          },
+          {
+            "type": "SPINEDIT",
+            "named": false
+          },
+          {
+            "type": "TABLES",
+            "named": false
+          },
+          {
+            "type": "TEXTEDIT",
+            "named": false
+          },
+          {
+            "type": "TIMEEDIT",
+            "named": false
+          },
+          {
+            "type": "TITLE",
+            "named": false
+          },
+          {
+            "type": "TO",
+            "named": false
+          },
+          {
+            "type": "TOOLBAR",
+            "named": false
+          },
+          {
+            "type": "TOPMENU",
+            "named": false
+          },
+          {
+            "type": "TRUE",
+            "named": false
+          },
+          {
+            "type": "TYPE",
+            "named": false
+          },
+          {
+            "type": "WEBCOMPONENT",
+            "named": false
+          },
+          {
+            "type": "WHERE",
+            "named": false
+          },
+          {
+            "type": "WITHOUT",
+            "named": false
+          },
+          {
+            "type": "YEAR",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "folder",
+          "named": true
+        },
+        {
+          "type": "grid",
+          "named": true
+        },
+        {
+          "type": "group_container",
+          "named": true
+        },
+        {
+          "type": "hbox",
+          "named": true
+        },
+        {
+          "type": "page",
+          "named": true
+        },
+        {
+          "type": "scrollgrid",
+          "named": true
+        },
+        {
+          "type": "table_container",
+          "named": true
+        },
+        {
+          "type": "tree_container",
+          "named": true
+        },
+        {
+          "type": "vbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "phantom_item",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "field_ref",
+          "named": true
+        },
+        {
+          "type": "type_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "schema",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "screen_record_entry",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "size": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "field_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "screen_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "area",
+          "named": true
+        },
+        {
+          "type": "screen_size",
+          "named": true
+        },
+        {
+          "type": "screen_title",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "screen_size",
+    "named": true,
+    "fields": {
+      "chars": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "lines": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "screen_title",
+    "named": true,
+    "fields": {
+      "title": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "scrollgrid",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name_keyword",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "area",
+          "named": true
+        },
+        {
+          "type": "attr_list_paren",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "action_defaults",
+          "named": true
+        },
+        {
+          "type": "attributes",
+          "named": true
+        },
+        {
+          "type": "instructions",
+          "named": true
+        },
+        {
+          "type": "keys",
+          "named": true
+        },
+        {
+          "type": "layout",
+          "named": true
+        },
+        {
+          "type": "schema",
+          "named": true
+        },
+        {
+          "type": "tables",
+          "named": true
+        },
+        {
+          "type": "toolbar",
+          "named": true
+        },
+        {
+          "type": "topmenu",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_container",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name_keyword",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "area",
+          "named": true
+        },
+        {
+          "type": "attr_list_paren",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_entry",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tables",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "table_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "toolbar",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "toolbar_item",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "toolbar_item",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ACTION",
+            "named": false
+          },
+          {
+            "type": "AGGREGATE",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "ATTRIBUTES",
+            "named": false
+          },
+          {
+            "type": "BUTTON",
+            "named": false
+          },
+          {
+            "type": "BUTTONEDIT",
+            "named": false
+          },
+          {
+            "type": "BY",
+            "named": false
+          },
+          {
+            "type": "CANVAS",
+            "named": false
+          },
+          {
+            "type": "CHARACTERS",
+            "named": false
+          },
+          {
+            "type": "CHECKBOX",
+            "named": false
+          },
+          {
+            "type": "COLUMNS",
+            "named": false
+          },
+          {
+            "type": "COMBOBOX",
+            "named": false
+          },
+          {
+            "type": "COMMAND",
+            "named": false
+          },
+          {
+            "type": "DATABASE",
+            "named": false
+          },
+          {
+            "type": "DATEEDIT",
+            "named": false
+          },
+          {
+            "type": "DAY",
+            "named": false
+          },
+          {
+            "type": "DEFAULT",
+            "named": false
+          },
+          {
+            "type": "DEFAULTS",
+            "named": false
+          },
+          {
+            "type": "DELIMITERS",
+            "named": false
+          },
+          {
+            "type": "EDIT",
+            "named": false
+          },
+          {
+            "type": "FALSE",
+            "named": false
+          },
+          {
+            "type": "FIELD",
+            "named": false
+          },
+          {
+            "type": "FOLDER",
+            "named": false
+          },
+          {
+            "type": "FORMONLY",
+            "named": false
+          },
+          {
+            "type": "FRACTION",
+            "named": false
+          },
+          {
+            "type": "GRID",
+            "named": false
+          },
+          {
+            "type": "GROUP",
+            "named": false
+          },
+          {
+            "type": "HBOX",
+            "named": false
+          },
+          {
+            "type": "HOUR",
+            "named": false
+          },
+          {
+            "type": "IMAGE",
+            "named": false
+          },
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "INSTRUCTIONS",
+            "named": false
+          },
+          {
+            "type": "KEYS",
+            "named": false
+          },
+          {
+            "type": "LABEL",
+            "named": false
+          },
+          {
+            "type": "LAYOUT",
+            "named": false
+          },
+          {
+            "type": "LIKE",
+            "named": false
+          },
+          {
+            "type": "LINES",
+            "named": false
+          },
+          {
+            "type": "MINUTE",
+            "named": false
+          },
+          {
+            "type": "MONTH",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "NULL",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "PAGE",
+            "named": false
+          },
+          {
+            "type": "PHANTOM",
+            "named": false
+          },
+          {
+            "type": "PIXELS",
+            "named": false
+          },
+          {
+            "type": "POINTS",
+            "named": false
+          },
+          {
+            "type": "PROGRESSBAR",
+            "named": false
+          },
+          {
+            "type": "RADIOGROUP",
+            "named": false
+          },
+          {
+            "type": "RECORD",
+            "named": false
+          },
+          {
+            "type": "SAMPLE",
+            "named": false
+          },
+          {
+            "type": "SCHEMA",
+            "named": false
+          },
+          {
+            "type": "SCREEN",
+            "named": false
+          },
+          {
+            "type": "SCROLLGRID",
+            "named": false
+          },
+          {
+            "type": "SECOND",
+            "named": false
+          },
+          {
+            "type": "SIZE",
+            "named": false
+          },
+          {
+            "type": "SLIDER",
+            "named": false
+          },
+          {
+            "type": "SPINEDIT",
+            "named": false
+          },
+          {
+            "type": "TABLE",
+            "named": false
+          },
+          {
+            "type": "TABLES",
+            "named": false
+          },
+          {
+            "type": "TEXTEDIT",
+            "named": false
+          },
+          {
+            "type": "TIMEEDIT",
+            "named": false
+          },
+          {
+            "type": "TITLE",
+            "named": false
+          },
+          {
+            "type": "TO",
+            "named": false
+          },
+          {
+            "type": "TOOLBAR",
+            "named": false
+          },
+          {
+            "type": "TOPMENU",
+            "named": false
+          },
+          {
+            "type": "TREE",
+            "named": false
+          },
+          {
+            "type": "TRUE",
+            "named": false
+          },
+          {
+            "type": "TYPE",
+            "named": false
+          },
+          {
+            "type": "VBOX",
+            "named": false
+          },
+          {
+            "type": "WEBCOMPONENT",
+            "named": false
+          },
+          {
+            "type": "WHERE",
+            "named": false
+          },
+          {
+            "type": "WITHOUT",
+            "named": false
+          },
+          {
+            "type": "YEAR",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "topmenu",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "menu_group",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tree_container",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name_keyword",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "area",
+          "named": true
+        },
+        {
+          "type": "attr_list_paren",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "datatype",
+          "named": true
+        },
+        {
+          "type": "field_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "untyped_attribute_item",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "field_ref",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      },
+      "tag": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list",
+          "named": true
+        },
+        {
+          "type": "type_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "key_value",
+          "named": true
+        },
+        {
+          "type": "multiword_value",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "number_with_unit",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "value_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "value_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "value",
+          "named": true
+        },
+        {
+          "type": "value_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vbox",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ACTION",
+            "named": false
+          },
+          {
+            "type": "AGGREGATE",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "ATTRIBUTES",
+            "named": false
+          },
+          {
+            "type": "BUTTON",
+            "named": false
+          },
+          {
+            "type": "BUTTONEDIT",
+            "named": false
+          },
+          {
+            "type": "BY",
+            "named": false
+          },
+          {
+            "type": "CANVAS",
+            "named": false
+          },
+          {
+            "type": "CHARACTERS",
+            "named": false
+          },
+          {
+            "type": "CHECKBOX",
+            "named": false
+          },
+          {
+            "type": "COLUMNS",
+            "named": false
+          },
+          {
+            "type": "COMBOBOX",
+            "named": false
+          },
+          {
+            "type": "COMMAND",
+            "named": false
+          },
+          {
+            "type": "DATABASE",
+            "named": false
+          },
+          {
+            "type": "DATEEDIT",
+            "named": false
+          },
+          {
+            "type": "DAY",
+            "named": false
+          },
+          {
+            "type": "DEFAULT",
+            "named": false
+          },
+          {
+            "type": "DEFAULTS",
+            "named": false
+          },
+          {
+            "type": "DELIMITERS",
+            "named": false
+          },
+          {
+            "type": "EDIT",
+            "named": false
+          },
+          {
+            "type": "FALSE",
+            "named": false
+          },
+          {
+            "type": "FIELD",
+            "named": false
+          },
+          {
+            "type": "FORMONLY",
+            "named": false
+          },
+          {
+            "type": "FRACTION",
+            "named": false
+          },
+          {
+            "type": "HOUR",
+            "named": false
+          },
+          {
+            "type": "IMAGE",
+            "named": false
+          },
+          {
+            "type": "INPUT",
+            "named": false
+          },
+          {
+            "type": "INSTRUCTIONS",
+            "named": false
+          },
+          {
+            "type": "ITEM",
+            "named": false
+          },
+          {
+            "type": "KEYS",
+            "named": false
+          },
+          {
+            "type": "LABEL",
+            "named": false
+          },
+          {
+            "type": "LAYOUT",
+            "named": false
+          },
+          {
+            "type": "LIKE",
+            "named": false
+          },
+          {
+            "type": "LINES",
+            "named": false
+          },
+          {
+            "type": "MINUTE",
+            "named": false
+          },
+          {
+            "type": "MONTH",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "NULL",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "PHANTOM",
+            "named": false
+          },
+          {
+            "type": "PIXELS",
+            "named": false
+          },
+          {
+            "type": "POINTS",
+            "named": false
+          },
+          {
+            "type": "PROGRESSBAR",
+            "named": false
+          },
+          {
+            "type": "RADIOGROUP",
+            "named": false
+          },
+          {
+            "type": "RECORD",
+            "named": false
+          },
+          {
+            "type": "SAMPLE",
+            "named": false
+          },
+          {
+            "type": "SCHEMA",
+            "named": false
+          },
+          {
+            "type": "SCREEN",
+            "named": false
+          },
+          {
+            "type": "SECOND",
+            "named": false
+          },
+          {
+            "type": "SEPARATOR",
+            "named": false
+          },
+          {
+            "type": "SIZE",
+            "named": false
+          },
+          {
+            "type": "SLIDER",
+            "named": false
+          },
+          {
+            "type": "SPINEDIT",
+            "named": false
+          },
+          {
+            "type": "TABLES",
+            "named": false
+          },
+          {
+            "type": "TEXTEDIT",
+            "named": false
+          },
+          {
+            "type": "TIMEEDIT",
+            "named": false
+          },
+          {
+            "type": "TITLE",
+            "named": false
+          },
+          {
+            "type": "TO",
+            "named": false
+          },
+          {
+            "type": "TOOLBAR",
+            "named": false
+          },
+          {
+            "type": "TOPMENU",
+            "named": false
+          },
+          {
+            "type": "TRUE",
+            "named": false
+          },
+          {
+            "type": "TYPE",
+            "named": false
+          },
+          {
+            "type": "WEBCOMPONENT",
+            "named": false
+          },
+          {
+            "type": "WHERE",
+            "named": false
+          },
+          {
+            "type": "WITHOUT",
+            "named": false
+          },
+          {
+            "type": "YEAR",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attr_list_paren",
+          "named": true
+        },
+        {
+          "type": "folder",
+          "named": true
+        },
+        {
+          "type": "grid",
+          "named": true
+        },
+        {
+          "type": "group_container",
+          "named": true
+        },
+        {
+          "type": "hbox",
+          "named": true
+        },
+        {
+          "type": "page",
+          "named": true
+        },
+        {
+          "type": "scrollgrid",
+          "named": true
+        },
+        {
+          "type": "table_container",
+          "named": true
+        },
+        {
+          "type": "tree_container",
+          "named": true
+        },
+        {
+          "type": "vbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!=",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": "<>",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "@",
+    "named": false
+  },
+  {
+    "type": "ACTION",
+    "named": false
+  },
+  {
+    "type": "AGGREGATE",
+    "named": false
+  },
+  {
+    "type": "AND",
+    "named": false
+  },
+  {
+    "type": "ATTRIBUTES",
+    "named": false
+  },
+  {
+    "type": "BUTTON",
+    "named": false
+  },
+  {
+    "type": "BUTTONEDIT",
+    "named": false
+  },
+  {
+    "type": "BY",
+    "named": false
+  },
+  {
+    "type": "CANVAS",
+    "named": false
+  },
+  {
+    "type": "CHARACTERS",
+    "named": false
+  },
+  {
+    "type": "CHECKBOX",
+    "named": false
+  },
+  {
+    "type": "COLUMNS",
+    "named": false
+  },
+  {
+    "type": "COMBOBOX",
+    "named": false
+  },
+  {
+    "type": "COMMAND",
+    "named": false
+  },
+  {
+    "type": "DATABASE",
+    "named": false
+  },
+  {
+    "type": "DATEEDIT",
+    "named": false
+  },
+  {
+    "type": "DAY",
+    "named": false
+  },
+  {
+    "type": "DEFAULT",
+    "named": false
+  },
+  {
+    "type": "DEFAULTS",
+    "named": false
+  },
+  {
+    "type": "DELIMITERS",
+    "named": false
+  },
+  {
+    "type": "EDIT",
+    "named": false
+  },
+  {
+    "type": "END",
+    "named": false
+  },
+  {
+    "type": "FALSE",
+    "named": false
+  },
+  {
+    "type": "FIELD",
+    "named": false
+  },
+  {
+    "type": "FOLDER",
+    "named": false
+  },
+  {
+    "type": "FORMONLY",
+    "named": false
+  },
+  {
+    "type": "FRACTION",
+    "named": false
+  },
+  {
+    "type": "GRID",
+    "named": false
+  },
+  {
+    "type": "GROUP",
+    "named": false
+  },
+  {
+    "type": "HBOX",
+    "named": false
+  },
+  {
+    "type": "HOUR",
+    "named": false
+  },
+  {
+    "type": "IMAGE",
+    "named": false
+  },
+  {
+    "type": "INPUT",
+    "named": false
+  },
+  {
+    "type": "INSTRUCTIONS",
+    "named": false
+  },
+  {
+    "type": "ITEM",
+    "named": false
+  },
+  {
+    "type": "KEYS",
+    "named": false
+  },
+  {
+    "type": "LABEL",
+    "named": false
+  },
+  {
+    "type": "LAYOUT",
+    "named": false
+  },
+  {
+    "type": "LIKE",
+    "named": false
+  },
+  {
+    "type": "LINES",
+    "named": false
+  },
+  {
+    "type": "MINUTE",
+    "named": false
+  },
+  {
+    "type": "MONTH",
+    "named": false
+  },
+  {
+    "type": "NOT",
+    "named": false
+  },
+  {
+    "type": "NULL",
+    "named": false
+  },
+  {
+    "type": "OR",
+    "named": false
+  },
+  {
+    "type": "PAGE",
+    "named": false
+  },
+  {
+    "type": "PHANTOM",
+    "named": false
+  },
+  {
+    "type": "PIXELS",
+    "named": false
+  },
+  {
+    "type": "POINTS",
+    "named": false
+  },
+  {
+    "type": "PROGRESSBAR",
+    "named": false
+  },
+  {
+    "type": "RADIOGROUP",
+    "named": false
+  },
+  {
+    "type": "RECORD",
+    "named": false
+  },
+  {
+    "type": "SAMPLE",
+    "named": false
+  },
+  {
+    "type": "SCHEMA",
+    "named": false
+  },
+  {
+    "type": "SCREEN",
+    "named": false
+  },
+  {
+    "type": "SCROLLGRID",
+    "named": false
+  },
+  {
+    "type": "SECOND",
+    "named": false
+  },
+  {
+    "type": "SEPARATOR",
+    "named": false
+  },
+  {
+    "type": "SIZE",
+    "named": false
+  },
+  {
+    "type": "SLIDER",
+    "named": false
+  },
+  {
+    "type": "SPINEDIT",
+    "named": false
+  },
+  {
+    "type": "TABLE",
+    "named": false
+  },
+  {
+    "type": "TABLES",
+    "named": false
+  },
+  {
+    "type": "TEXTEDIT",
+    "named": false
+  },
+  {
+    "type": "TIMEEDIT",
+    "named": false
+  },
+  {
+    "type": "TITLE",
+    "named": false
+  },
+  {
+    "type": "TO",
+    "named": false
+  },
+  {
+    "type": "TOOLBAR",
+    "named": false
+  },
+  {
+    "type": "TOPMENU",
+    "named": false
+  },
+  {
+    "type": "TREE",
+    "named": false
+  },
+  {
+    "type": "TRUE",
+    "named": false
+  },
+  {
+    "type": "TYPE",
+    "named": false
+  },
+  {
+    "type": "VBOX",
+    "named": false
+  },
+  {
+    "type": "WEBCOMPONENT",
+    "named": false
+  },
+  {
+    "type": "WHERE",
+    "named": false
+  },
+  {
+    "type": "WITHOUT",
+    "named": false
+  },
+  {
+    "type": "YEAR",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "area_text",
+    "named": true
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "item_tag",
+    "named": true
+  },
+  {
+    "type": "layout_tag",
+    "named": true
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "row_separator",
+    "named": true
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

@@ -1,0 +1,59 @@
+==================
+instructions
+==================
+
+INSTRUCTIONS
+SCREEN RECORD s_pml[2](pml02,pml04,pml041,pml07)
+SCREEN RECORD Undefined(formonly.cn2)
+SCREEN RECORD s_items
+  ( stock.*, items.quantity, FORMONLY.total_price )
+DELIMITERS "[]"
+DEFAULT SAMPLE = "MMM"
+END
+
+---
+
+(source_file
+  (instructions
+    (screen_record_entry
+      (name
+        (identifier))
+      (number)
+      (field_ref
+        (name
+          (identifier)))
+      (field_ref
+        (name
+          (identifier)))
+      (field_ref
+        (name
+          (identifier)))
+      (field_ref
+        (name
+          (identifier))))
+    (screen_record_entry
+      (name
+        (identifier))
+      (field_ref
+        (name)
+        (name
+          (identifier))))
+    (screen_record_entry
+      (name
+        (identifier))
+      (field_ref
+        (name
+          (identifier)))
+      (field_ref
+        (name
+          (identifier))
+        (name
+          (identifier)))
+      (field_ref
+        (name)
+        (name
+          (identifier))))
+    (delimiters_entry
+      (string))
+    (default_sample_entry
+      (string))))

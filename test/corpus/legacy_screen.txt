@@ -1,0 +1,98 @@
+==================
+legacy screen section
+==================
+
+DATABASE ds WITHOUT NULL INPUT
+
+SCREEN SIZE 24 BY 80 TITLE "Legacy"
+{
+CustId : [f001   ] Name: [f002                ]
+- - - - - - - - - - - - - -
+[cn3 ]/[cn2 ]     # of items [cnt  ]
+}
+
+TABLES pmk_file pml_file
+
+ATTRIBUTES
+pmk01 = pmk01, COLOR=YELLOW, COMMENTS="Index field";
+cnt   = FORMONLY.cnt TYPE SMALLINT, NOENTRY;
+END
+
+INSTRUCTIONS
+DELIMITERS '[]'
+SCREEN RECORD s_pml[2](pml02,pml04)
+END
+
+---
+
+(source_file
+  (schema
+    (identifier))
+  (layout
+    (screen_section
+      (screen_size
+        (number)
+        (number))
+      (screen_title
+        (string))
+      (area
+        (area_text)
+        (item_tag)
+        (area_text)
+        (item_tag)
+        (area_text)
+        (item_tag)
+        (area_text)
+        (item_tag)
+        (area_text)
+        (item_tag))))
+  (tables
+    (table_entry
+      (identifier))
+    (table_entry
+      (identifier)))
+  (attributes
+    (untyped_attribute_item
+      (identifier)
+      (field_ref
+        (name
+          (identifier)))
+      (attr_list
+        (attribute
+          (name
+            (identifier))
+          (value
+            (name
+              (identifier))))
+        (attribute
+          (name
+            (identifier))
+          (value
+            (string)))))
+    (untyped_attribute_item
+      (identifier)
+      (field_ref
+        (name)
+        (name
+          (identifier)))
+      (type_clause
+        (datatype
+          (name
+            (identifier))))
+      (attr_list
+        (attribute
+          (name
+            (identifier))))))
+  (instructions
+    (delimiters_entry
+      (string))
+    (screen_record_entry
+      (name
+        (identifier))
+      (number)
+      (field_ref
+        (name
+          (identifier)))
+      (field_ref
+        (name
+          (identifier))))))

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "per",
+      "camelcase": "Per",
+      "title": "Genero Form Specification",
+      "scope": "source.per",
+      "file-types": [
+        "per"
+      ],
+      "injection-regex": "^per$",
+      "class-name": "TreeSitterPer"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Genero Form Specification (.per)",
+    "authors": [
+      {
+        "name": "darcy",
+        "email": "darcy_joven@live.com",
+        "url": "github.com/darcyjoven"
+      }
+    ],
+    "links": {
+      "repository": "github.com/darcyjoven/tree-sitter-per",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": false,
+    "zig": false
+  }
+}

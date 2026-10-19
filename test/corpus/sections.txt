@@ -1,0 +1,38 @@
+==================
+schema tables keys
+==================
+
+SCHEMA ds
+TABLES
+  mmd_file,
+  alias1 = other_db@server:owner.some_table
+END
+KEYS
+  F10 = "City list"
+  Control-z = %"Undo"
+END
+
+---
+
+(source_file
+  (schema
+    (identifier))
+  (tables
+    (table_entry
+      (identifier))
+    (table_entry
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier)))
+  (keys
+    (key_entry
+      (key_name
+        (identifier))
+      (string))
+    (key_entry
+      (key_name
+        (identifier)
+        (identifier))
+      (string))))
